@@ -67,6 +67,15 @@ eg, show a loading indicator.
 </script>
 ```
 
+## Development
+
+```bash
+yarn install
+
+# Run example
+yarn example
+```
+
 ## Contributing
 
 1. Fork it!
