@@ -36,9 +36,9 @@ Note that `<no-ssr />` can only contain at most **ONE** child component/element.
 
 ### Placeholder
 
-Use a component as placeholder until the actual component is rendered on client-side.
+Use a component as placeholder until component is mounted on client-side.
 
-eg, show a loading indicator before `<comments />` is rendered.
+eg, show a loading indicator before `<no-ssr />` is rendered.
 
 ```vue
 <template>
