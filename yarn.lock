@@ -774,9 +774,9 @@ big.js@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
 
-bili@^0.15.0:
-  version "0.15.4"
-  resolved "https://registry.npmjs.org/bili/-/bili-0.15.4.tgz#b2e627c06f53c541c62ded1089b424f3acaeb76e"
+bili@^0.16.0-rc.1:
+  version "0.16.0-rc.1"
+  resolved "https://registry.npmjs.org/bili/-/bili-0.16.0-rc.1.tgz#13629cfffe93ce74e0ebb794a717149eaf00a708"
   dependencies:
     cac "^3.0.4"
     camelcase "^4.1.0"
@@ -795,6 +795,7 @@ bili@^0.15.0:
     rollup-plugin-replace "^1.1.1"
     rollup-plugin-uglify "^1.0.2"
     rollup-watch "^2.5.0"
+    stringify-author "^0.1.3"
     switchy "^0.1.0"
     update-notifier "^2.1.0"
 
@@ -4982,6 +4983,10 @@ string_decoder@~1.0.0:
   resolved "https://registry.npmjs.org/string_decoder/-/string_decoder-1.0.1.tgz#62e200f039955a6810d8df0a33ffc0f013662d98"
   dependencies:
     safe-buffer "^5.0.1"
+
+stringify-author@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.npmjs.org/stringify-author/-/stringify-author-0.1.3.tgz#d581e02ce0b55cda3c953e62add211fae4b0ef66"
 
 stringstream@~0.0.4:
   version "0.0.5"

@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "bili": "^0.15.0",
+    "bili": "^0.16.0-rc.1",
     "eslint-config-rem": "^3.0.0",
     "ream": "^1.0.0-rc.4",
     "xo": "^0.18.0"
