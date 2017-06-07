@@ -12,12 +12,13 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo 'no tests!' && npm run lint && npm run build",
+    "test": "echo 'no tests!' && npm run lint",
     "lint": "xo",
     "build": "npm run build:cjs && npm run build:umd",
     "build:cjs": "FORMAT=cjs bili",
     "build:umd": "FORMAT=umd bili",
-    "example": "ream dev"
+    "example": "ream dev",
+    "prepublish": "npm run build"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
