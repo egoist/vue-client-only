@@ -17,8 +17,12 @@
     "build": "npm run build:cjs && npm run build:umd",
     "build:cjs": "FORMAT=cjs bili",
     "build:umd": "FORMAT=umd bili",
-    "example": "ream dev",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "example": "poi"
+  },
+  "poi": {
+    "entry": "example/index.js",
+    "dist": "example/dist"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
@@ -26,7 +30,7 @@
   "devDependencies": {
     "bili": "^0.16.0-rc.1",
     "eslint-config-rem": "^3.0.0",
-    "ream": "^1.0.0-rc.4",
+    "poi": "^9.3.1",
     "xo": "^0.18.0"
   },
   "xo": {

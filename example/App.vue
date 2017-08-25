@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div id="app">
     <h1>Home</h1>
     <no-ssr>
       <h2>This part is rendered on the client-side only</h2>
