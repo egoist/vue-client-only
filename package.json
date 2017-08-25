@@ -1,6 +1,6 @@
 {
   "name": "vue-no-ssr",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Vue component to wrap non SSR friendly components",
   "repository": {
     "url": "egoist/vue-no-ssr",
