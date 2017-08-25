@@ -36,7 +36,7 @@ Note that `<no-ssr />` can only contain at most **ONE** child component/element.
 
 ### Placeholder
 
-Use a component as placeholder until `<no-ssr />` is mounted on client-side.
+Use a component or text as placeholder until `<no-ssr />` is mounted on client-side.
 
 eg, show a loading indicator.
 
