@@ -25,7 +25,7 @@ export default {
       {
         class: ['no-ssr-placeholder']
       },
-      this.placeholder
+      this.$slots.placeholder || this.placeholder
     )
   }
 }

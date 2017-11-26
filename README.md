@@ -36,7 +36,7 @@ Note that `<no-ssr />` can only contain at most **ONE** child component/element.
 
 ### Placeholder
 
-Use a component or text as placeholder until `<no-ssr />` is mounted on client-side.
+Use a slot or text as placeholder until `<no-ssr />` is mounted on client-side.
 
 eg, show a loading indicator.
 
@@ -44,8 +44,13 @@ eg, show a loading indicator.
 <template>
   <div id="app">
     <h1>My Website</h1>
-    <no-ssr :placeholder="Loading">
-      <!-- this component will only be rendered on client-side -->
+    <!-- use slot -->
+    <no-ssr>
+      <comments />
+      <comments-placeholder slot="placeholder" />
+    </no-ssr>
+    <!-- or use text -->
+    <no-ssr placeholder="Loading...">
       <comments />
     </no-ssr>
   </div>
@@ -55,11 +60,6 @@ eg, show a loading indicator.
   import NoSSR from 'vue-no-ssr'
 
   export default {
-    data() {
-      return {
-        Loading: require('./Loading.vue')
-      }
-    },
     components: {
       'no-ssr': NoSSR
     }
