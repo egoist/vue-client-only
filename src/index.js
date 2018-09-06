@@ -1,6 +1,6 @@
 export default {
   name: 'no-ssr',
-  props: ['placeholder'],
+  props: ['placeholder', 'tag'],
   data() {
     return {
       canRender: false
@@ -21,7 +21,7 @@ export default {
       return this.$slots.default && this.$slots.default[0]
     }
     return h(
-      'div',
+      this.tag || 'span',
       {
         class: ['no-ssr-placeholder']
       },
