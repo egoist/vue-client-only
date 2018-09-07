@@ -67,6 +67,21 @@ eg, show a loading indicator.
 </script>
 ```
 
+Note that the placeholder markup can be customized with the `tag` attribute (default `span`). Eg:
+
+```vue
+<no-ssr placeholder="Hi" tag="h1">
+  <h1>Hello</h1>
+</no-ssr>
+
+<!-- will render on server-side: -->
+<h1 class="no-ssr-placeholder">Hi</h1>
+
+<!-- will render on client-side: -->
+<h1>Hello</h1>
+```
+
+
 ## Development
 
 ```bash
