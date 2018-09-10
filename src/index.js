@@ -1,31 +1,30 @@
 export default {
   name: 'no-ssr',
-  props: ['placeholder'],
-  data() {
-    return {
-      canRender: false
+  functional: true,
+  props: {
+    placeholder: String,
+    placeholderTag: {
+      type: String,
+      default: 'div'
     }
   },
-  mounted() {
-    this.canRender = true
-  },
-  render(h) {
-    if (this.canRender) {
-      if (
-        process.env.NODE_ENV === 'development' &&
-        this.$slots.default &&
-        this.$slots.default.length > 1
-      ) {
-        throw new Error('[vue-no-ssr] You cannot use multiple child components')
-      }
-      return this.$slots.default && this.$slots.default[0]
+  render(h, { parent, slots, props }) {
+    const { default: defaultSlot, placeholder: placeholderSlot } = slots()
+
+    if (parent._isMounted) {
+      return defaultSlot
     }
+
+    parent.$once('hook:mounted', () => {
+      parent.$forceUpdate()
+    })
+
     return h(
-      'div',
+      props.placeholderTag,
       {
         class: ['no-ssr-placeholder']
       },
-      this.$slots.placeholder || this.placeholder
+      props.placeholder || placeholderSlot
     )
   }
 }

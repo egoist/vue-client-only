@@ -32,8 +32,6 @@ yarn add vue-no-ssr
 </script>
 ```
 
-Note that `<no-ssr />` can only contain at most **ONE** child component/element.
-
 ### Placeholder
 
 Use a slot or text as placeholder until `<no-ssr />` is mounted on client-side.
@@ -65,6 +63,22 @@ eg, show a loading indicator.
     }
   }
 </script>
+```
+
+By default the placeholder will be wrapped in a `div` tag, however you can use `placeholderTag` prop to customize it:
+
+```vue
+<no-ssr placeholder="loading" placeholader-tag="span">
+  <comments />
+</no-ssr>
+```
+
+And you get:
+
+```html
+<span class="no-ssr-placeholder">
+  loading
+</span>
 ```
 
 ## Development
