@@ -1,7 +1,14 @@
 <template>
   <div id="app">
     <h1>Home</h1>
-    <no-ssr placeholder="hi">
+    <no-ssr placeholder="props placeholder" placeholderTag="h2">
+      <h2>This part is rendered on the client-side only</h2>
+    </no-ssr>
+    <no-ssr>
+      <h2 slot="placeholder">slot placeholder</h2>
+      <h2>This part is rendered on the client-side only</h2>
+    </no-ssr>
+    <no-ssr no-placeholder>
       <h2>This part is rendered on the client-side only</h2>
     </no-ssr>
   </div>

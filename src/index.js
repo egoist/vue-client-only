@@ -6,6 +6,10 @@ export default {
     placeholderTag: {
       type: String,
       default: 'div'
+    },
+    noPlaceholder: {
+      type: Boolean,
+      default: false
     }
   },
   render(h, { parent, slots, props }) {
@@ -18,6 +22,10 @@ export default {
     parent.$once('hook:mounted', () => {
       parent.$forceUpdate()
     })
+
+    if (props.noPlaceholder) {
+      return null
+    }
 
     return h(
       props.placeholderTag,
