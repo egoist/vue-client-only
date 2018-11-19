@@ -19,12 +19,16 @@ export default {
       parent.$forceUpdate()
     })
 
-    return h(
-      props.placeholderTag,
-      {
-        class: ['no-ssr-placeholder']
-      },
-      props.placeholder || placeholderSlot
-    )
+    if (props.placeholderTag && (props.placeholder || placeholderSlot)) {
+      return h(
+        props.placeholderTag,
+        {
+          class: ['no-ssr-placeholder']
+        },
+        props.placeholder || placeholderSlot
+      )
+    }
+
+    return h(false)
   }
 }
