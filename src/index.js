@@ -9,7 +9,7 @@ export default {
     }
   },
   render(h, { parent, slots, props }) {
-    const { default: defaultSlot, placeholder: placeholderSlot } = slots()
+    const { default: defaultSlot = [], placeholder: placeholderSlot } = slots()
 
     if (parent._isMounted) {
       return defaultSlot
@@ -19,12 +19,18 @@ export default {
       parent.$forceUpdate()
     })
 
-    return h(
-      props.placeholderTag,
-      {
-        class: ['no-ssr-placeholder']
-      },
-      props.placeholder || placeholderSlot
-    )
+    if (props.placeholderTag && (props.placeholder || placeholderSlot)) {
+      return h(
+        props.placeholderTag,
+        {
+          class: ['no-ssr-placeholder']
+        },
+        props.placeholder || placeholderSlot
+      )
+    }
+
+    // Return a placeholder element for each child in the default slot
+    // Or if no children return a single placeholder
+    return defaultSlot.length > 0 ? defaultSlot.map(() => h(false)) : h(false)
   }
 }

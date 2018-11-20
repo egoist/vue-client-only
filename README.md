@@ -81,6 +81,10 @@ And you get:
 </span>
 ```
 
+If prop `placeholder` is an empty string (or `null`) and no `placeholder`
+slot is found, then `<no-ssr>` will render the Vue placeholder element `<!---->`
+instead of rendering the `placholder-tag` during SSR render.
+
 ## Development
 
 ```bash
