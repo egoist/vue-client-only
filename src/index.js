@@ -29,8 +29,8 @@ export default {
       )
     }
 
-    // return a placeholder element for each child in the default slot
-    // or if no children return a single placeholder
-    return defaultSlot.length ? defaultSlot.map(() => h(false)) : h(false)
+    // Return a placeholder element for each child in the default slot
+    // Or if no children return a single placeholder
+    return defaultSlot.length > 0 ? defaultSlot.map(() => h(false)) : h(false)
   }
 }
