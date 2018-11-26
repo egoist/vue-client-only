@@ -1,5 +1,5 @@
 export default {
-  name: 'no-ssr',
+  name: 'NoSsr',
   functional: true,
   props: {
     placeholder: String,
