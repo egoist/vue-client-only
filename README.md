@@ -68,7 +68,7 @@ eg, show a loading indicator.
 By default the placeholder will be wrapped in a `div` tag, however you can use `placeholderTag` prop to customize it:
 
 ```vue
-<no-ssr placeholder="loading" placeholader-tag="span">
+<no-ssr placeholder="loading" placeholder-tag="span">
   <comments />
 </no-ssr>
 ```
