@@ -1,3 +1,5 @@
+> __This branch is for version 1.x, switch to [master](https://github.com/saberland/saber) branch for the latest docs.__
+
 # vue-no-ssr
 
 [![NPM version](https://img.shields.io/npm/v/vue-no-ssr.svg?style=flat)](https://npmjs.com/package/vue-no-ssr) [![NPM downloads](https://img.shields.io/npm/dm/vue-no-ssr.svg?style=flat)](https://npmjs.com/package/vue-no-ssr) [![CircleCI](https://circleci.com/gh/egoist/vue-no-ssr/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/vue-no-ssr/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
