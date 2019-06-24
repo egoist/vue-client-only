@@ -1,12 +1,14 @@
-# vue-no-ssr
+# vue-client-only
 
-[![NPM version](https://img.shields.io/npm/v/vue-no-ssr.svg?style=flat)](https://npmjs.com/package/vue-no-ssr) [![NPM downloads](https://img.shields.io/npm/dm/vue-no-ssr.svg?style=flat)](https://npmjs.com/package/vue-no-ssr) [![CircleCI](https://circleci.com/gh/egoist/vue-no-ssr/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/vue-no-ssr/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
+[![NPM version](https://img.shields.io/npm/v/vue-client-only.svg?style=flat)](https://npmjs.com/package/vue-client-only) [![NPM downloads](https://img.shields.io/npm/dm/vue-client-only.svg?style=flat)](https://npmjs.com/package/vue-client-only) [![CircleCI](https://circleci.com/gh/egoist/vue-client-only/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/vue-client-only/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
 
 ## Install
 
 ```bash
-yarn add vue-no-ssr
+yarn add vue-client-only
 ```
+
+> __This branch is for latest version, switch to [1.x](https://github.com/egoist/vue-client-only/tree/1.x) branch for the `vue-client-only` docs.__
 
 ## Usage
 
@@ -14,19 +16,19 @@ yarn add vue-no-ssr
 <template>
   <div id="app">
     <h1>My Website</h1>
-    <no-ssr>
+    <client-only>
       <!-- this component will only be rendered on client-side -->
       <comments />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
 <script>
-  import NoSSR from 'vue-no-ssr'
+  import ClientOnly from 'vue-client-only'
 
   export default {
     components: {
-      'no-ssr': NoSSR
+      ClientOnly
     }
   }
 </script>
@@ -34,7 +36,7 @@ yarn add vue-no-ssr
 
 ### Placeholder
 
-Use a slot or text as placeholder until `<no-ssr />` is mounted on client-side.
+Use a slot or text as placeholder until `<client-only />` is mounted on client-side.
 
 eg, show a loading indicator.
 
@@ -43,23 +45,23 @@ eg, show a loading indicator.
   <div id="app">
     <h1>My Website</h1>
     <!-- use slot -->
-    <no-ssr>
+    <client-only>
       <comments />
       <comments-placeholder slot="placeholder" />
-    </no-ssr>
+    </client-only>
     <!-- or use text -->
-    <no-ssr placeholder="Loading...">
+    <client-only placeholder="Loading...">
       <comments />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
 <script>
-  import NoSSR from 'vue-no-ssr'
+  import ClientOnly from 'vue-client-only'
 
   export default {
     components: {
-      'no-ssr': NoSSR
+      ClientOnly
     }
   }
 </script>
@@ -68,21 +70,21 @@ eg, show a loading indicator.
 By default the placeholder will be wrapped in a `div` tag, however you can use `placeholderTag` prop to customize it:
 
 ```vue
-<no-ssr placeholder="loading" placeholder-tag="span">
+<client-only placeholder="loading" placeholder-tag="span">
   <comments />
-</no-ssr>
+</client-only>
 ```
 
 And you get:
 
 ```html
-<span class="no-ssr-placeholder">
+<span class="client-only-placeholder">
   loading
 </span>
 ```
 
 If prop `placeholder` is an empty string (or `null`) and no `placeholder`
-slot is found, then `<no-ssr>` will render the Vue placeholder element `<!---->`
+slot is found, then `<client-only>` will render the Vue placeholder element `<!---->`
 instead of rendering the `placholder-tag` during SSR render.
 
 ## Development
@@ -105,7 +107,7 @@ yarn example
 
 ## Author
 
-**vue-no-ssr** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/vue-no-ssr/contributors)).
+**client-only** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/vue-client-only/contributors)).
 
 > [egoist.moe](https://egoist.moe) · GitHub [@egoist](https://github.com/egoist) · Twitter [@_egoistlily](https://twitter.com/_egoistlily)

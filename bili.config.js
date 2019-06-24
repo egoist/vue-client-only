@@ -2,7 +2,7 @@ const format = process.env.FORMAT
 
 exports.format = format
 
-exports.moduleName = 'NoSSR'
+exports.moduleName = 'ClientOnly'
 
 exports.banner = true
 
