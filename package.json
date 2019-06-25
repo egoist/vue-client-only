@@ -1,6 +1,6 @@
 {
   "name": "vue-client-only",
-  "version": "2.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Vue component to wrap non SSR friendly components",
   "repository": {
     "url": "egoist/vue-client-only",
