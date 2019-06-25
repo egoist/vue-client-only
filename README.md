@@ -107,7 +107,7 @@ yarn example
 
 ## Author
 
-**client-only** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
+**vue-client-only** © [egoist](https://github.com/egoist), Released under the [MIT](./LICENSE) License.<br>
 Authored and maintained by egoist with help from contributors ([list](https://github.com/egoist/vue-client-only/contributors)).
 
 > [egoist.moe](https://egoist.moe) · GitHub [@egoist](https://github.com/egoist) · Twitter [@_egoistlily](https://twitter.com/_egoistlily)
