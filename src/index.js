@@ -1,5 +1,5 @@
 export default {
-  name: 'NoSsr',
+  name: 'ClientOnly',
   functional: true,
   props: {
     placeholder: String,
@@ -23,7 +23,7 @@ export default {
       return h(
         props.placeholderTag,
         {
-          class: ['no-ssr-placeholder']
+          class: ['client-only-placeholder']
         },
         props.placeholder || placeholderSlot
       )

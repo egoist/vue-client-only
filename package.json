@@ -1,13 +1,13 @@
 {
-  "name": "vue-no-ssr",
-  "version": "1.1.1",
+  "name": "vue-client-only",
+  "version": "0.0.0-semantic-release",
   "description": "Vue component to wrap non SSR friendly components",
   "repository": {
-    "url": "egoist/vue-no-ssr",
+    "url": "egoist/vue-client-only",
     "type": "git"
   },
-  "main": "dist/vue-no-ssr.common.js",
-  "unpkg": "dist/vue-no-ssr.min.js",
+  "main": "dist/vue-client-only.common.js",
+  "unpkg": "dist/vue-client-only.min.js",
   "files": [
     "dist"
   ],

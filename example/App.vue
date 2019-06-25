@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <h1>Home</h1>
-    <no-ssr placeholder="hi">
+    <client-only placeholder="hi">
       <h2>This part is rendered on the client-side only</h2>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
 <script>
-  import NoSSR from '../src'
+  import ClientOnly from '../src'
 
   export default {
     components: {
-      'no-ssr': NoSSR
+      ClientOnly
     }
   }
 </script>
