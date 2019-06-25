@@ -8,7 +8,7 @@
 yarn add vue-client-only
 ```
 
-> __This branch is for latest version, switch to [1.x](https://github.com/egoist/vue-client-only/tree/1.x) branch for the `vue-no-ssr` docs.__
+> __This project is previously known as *vue-no-ssr*, switch to [1.x](https://github.com/egoist/vue-client-only/tree/1.x) branch for the old docs.__
 
 ## Usage
 
