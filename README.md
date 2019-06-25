@@ -1,4 +1,4 @@
-> __This branch is for version 1.x, switch to [master](https://github.com/saberland/saber) branch for the latest docs.__
+> __This branch is for version 1.x, switch to [master](https://github.com/egoist/vue-client-only) branch for the latest docs.__
 
 # vue-no-ssr
 
