@@ -31,7 +31,7 @@
     "bili": "^0.16.0-rc.1",
     "eslint-config-rem": "^3.0.0",
     "poi": "^9.3.1",
-    "xo": "^0.18.0"
+    "xo": "^0.28.1"
   },
   "xo": {
     "extends": "rem/prettier",
