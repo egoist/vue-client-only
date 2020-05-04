@@ -8,16 +8,17 @@ export default {
       default: 'div'
     }
   },
-  render(h, { parent, slots, props }) {
-    const { default: defaultSlot = [], placeholder: placeholderSlot } = slots()
+  render(h, { parent, scopedSlots, props }) {
 
     if (parent._isMounted) {
-      return defaultSlot
+      return scopedSlots.default(undefined);
     }
 
     parent.$once('hook:mounted', () => {
       parent.$forceUpdate()
     })
+
+    const placeholderSlot = scopedSlots.placeholder(undefined) || [];
 
     if (props.placeholderTag && (props.placeholder || placeholderSlot)) {
       return h(
@@ -28,6 +29,8 @@ export default {
         props.placeholder || placeholderSlot
       )
     }
+
+    const defaultSlot = scopedSlots.default(undefined) || [];
 
     // Return a placeholder element for each child in the default slot
     // Or if no children return a single placeholder
