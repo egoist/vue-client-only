@@ -9,16 +9,15 @@ export default {
     }
   },
   render(h, { parent, scopedSlots, props }) {
-
     if (parent._isMounted) {
-      return scopedSlots.default(undefined);
+      return scopedSlots.default(undefined)
     }
 
     parent.$once('hook:mounted', () => {
       parent.$forceUpdate()
     })
 
-    const placeholderSlot = scopedSlots.placeholder(undefined) || [];
+    const placeholderSlot = scopedSlots.placeholder(undefined) || []
 
     if (props.placeholderTag && (props.placeholder || placeholderSlot)) {
       return h(
@@ -30,7 +29,7 @@ export default {
       )
     }
 
-    const defaultSlot = scopedSlots.default(undefined) || [];
+    const defaultSlot = scopedSlots.default(undefined) || []
 
     // Return a placeholder element for each child in the default slot
     // Or if no children return a single placeholder
