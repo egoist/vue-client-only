@@ -1,3 +1,5 @@
+/* global window */
+
 export default {
   name: 'ClientOnly',
   functional: true,
@@ -13,8 +15,8 @@ export default {
 
     const isServerRendered =
       !parent._isMounted || // default detection
-      !!window.__PRERENDER_STATUS || // prerender-spa-plugin
-      navigator.userAgent === 'ReactSnap' // react-snap
+      Boolean(window.__PRERENDER_STATUS) || // prerender-spa-plugin
+      window.navigator.userAgent === 'ReactSnap' // react-snap
 
     if (!isServerRendered) {
       return defaultSlot
