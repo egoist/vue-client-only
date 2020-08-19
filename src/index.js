@@ -11,7 +11,12 @@ export default {
   render(h, { parent, slots, props }) {
     const { default: defaultSlot = [], placeholder: placeholderSlot } = slots()
 
-    if (parent._isMounted) {
+    const isServerRendered =
+      !parent._isMounted || // default detection
+      !!window.__PRERENDER_STATUS || // prerender-spa-plugin
+      navigator.userAgent === 'ReactSnap' // react-snap
+
+    if (!isServerRendered) {
       return defaultSlot
     }
 
