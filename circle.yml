@@ -20,6 +20,9 @@ jobs:
           paths:
             - ./node_modules
       - run:
+          name: types
+          command: yarn types
+      - run:
           name: test
           command: yarn test
       - run:
