@@ -38,7 +38,7 @@
     "tsd": "^0.16.0",
     "typescript": "^4.3.2",
     "vue": "^2.6.13",
-    "xo": "^0.18.0"
+    "xo": "^0.41.0"
   },
   "xo": {
     "extends": "rem/prettier",
