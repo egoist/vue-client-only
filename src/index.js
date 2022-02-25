@@ -6,6 +6,10 @@ export default {
     placeholderTag: {
       type: String,
       default: 'div'
+    },
+    placeholderClass: {
+      type: String,
+      default: 'client-only-placeholder'
     }
   },
   render(h, { parent, slots, props }) {
@@ -23,7 +27,7 @@ export default {
       return h(
         props.placeholderTag,
         {
-          class: ['client-only-placeholder']
+          class: [props.placeholderClass]
         },
         props.placeholder || placeholderSlot
       )

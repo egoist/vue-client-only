@@ -67,10 +67,10 @@ eg, show a loading indicator.
 </script>
 ```
 
-By default the placeholder will be wrapped in a `div` tag, however you can use `placeholderTag` prop to customize it:
+By default the placeholder will be wrapped in a `div` tag with `client-only-placeholder` class, however you can use `placeholderTag` and `placeholderClass` prop to customize it:
 
 ```vue
-<client-only placeholder="loading" placeholder-tag="span">
+<client-only placeholder="loading" placeholder-tag="span" placeholder-class="my-placeholder-class">
   <comments />
 </client-only>
 ```
@@ -78,7 +78,7 @@ By default the placeholder will be wrapped in a `div` tag, however you can use `
 And you get:
 
 ```html
-<span class="client-only-placeholder">
+<span class="my-placeholder-class">
   loading
 </span>
 ```
